@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Mohammed Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            float: "float 3s ease-in-out infinite",
+          },
+          keyframes: {
+            float: {
+              "0%,100%": { transform: "translateY(0)" },
+              "50%": { transform: "translateY(-10px)" },
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Font Awesome (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+
+
+<body class="bg-[#020617] text-white" style="scroll-behavior: smooth; overflow-x: hidden;">
+
+  <!-- LOADER -->
+  <div id="loader" class="fixed inset-0 bg-[#020617] flex items-center justify-center z-50">
+    <div class="loader-circle w-16 h-16 rounded-full border-4 border-t-blue-500 border-gray-800 animate-spin"></div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="fixed w-full bg-[#020617]/80 backdrop-blur z-40 flex justify-between items-center px-10 py-5">
+    <h1 class="text-xl font-bold"><i class="fa-solid fa-user mr-2 text-blue-400"></i>Mohammed</h1>
+      <div class="flex items-center space-x-6">
+      <div class="space-x-8 text-gray-300 hidden md:block">
+        <a href="#home" class="nav-link hover:text-blue-400 transition">Home</a>
+        <a href="#about" class="nav-link hover:text-blue-400 transition">About</a>
+        <a href="#skills" class="nav-link hover:text-blue-400 transition">Skills</a>
+        <a href="#projects" class="nav-link hover:text-blue-400 transition">Projects</a>
+        <a href="#contact" class="nav-link hover:text-blue-400 transition">Contact</a>
+      </div>
+      
+    </div>
+  </nav>
+
+  <!-- SCROLL INDICATORS -->
+  <div class="fixed right-8 top-1/2 transform -translate-y-1/2 z-30 hidden md:flex flex-col gap-4">
+    <button class="scroll-dot w-3 h-3 rounded-full bg-gray-500 transition-all hover:bg-blue-400 hover:w-4 hover:h-4" data-section="0" title="Home"></button>
+    <button class="scroll-dot w-3 h-3 rounded-full bg-gray-500 transition-all hover:bg-blue-400 hover:w-4 hover:h-4" data-section="1" title="About"></button>
+    <button class="scroll-dot w-3 h-3 rounded-full bg-gray-500 transition-all hover:bg-blue-400 hover:w-4 hover:h-4" data-section="2" title="Skills"></button>
+    <button class="scroll-dot w-3 h-3 rounded-full bg-gray-500 transition-all hover:bg-blue-400 hover:w-4 hover:h-4" data-section="3" title="Projects"></button>
+    <button class="scroll-dot w-3 h-3 rounded-full bg-gray-500 transition-all hover:bg-blue-400 hover:w-4 hover:h-4" data-section="4" title="Contact"></button>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="scroll-section h-screen flex items-center justify-center px-10 pt-32 snap-start relative overflow-hidden">
+    <!-- Background gradient -->
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-transparent -z-10"></div>
+    
+    <div class="grid md:grid-cols-2 gap-10 items-center w-full max-w-6xl mx-auto">
+      <div class="fade-in-up">
+        <h2 class="text-5xl md:text-6xl font-extrabold leading-tight mb-4">
+          Hi, I'm Mohammed <br>
+          <span id="typing" class="text-blue-400"></span>
+        </h2>
+        <p class="text-gray-400 mt-6 max-w-xl text-lg">
+          I create modern, fast and beautiful websites with cutting-edge technologies.
+        </p>
+        <div class="mt-8 flex gap-4">
+          <a href="#projects" class="bg-blue-600 px-8 py-3 rounded-lg hover:bg-blue-700 transition transform hover:scale-105">My Work</a>
+          <a href="#contact" class="border border-gray-500 px-8 py-3 rounded-lg hover:border-blue-400 hover:text-blue-400 transition">Contact</a>
+        </div>
+      </div>
+
+      <div class="fade-in-up relative flex justify-center">
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full blur-3xl opacity-20 -z-10"></div>
+        <img src="/src/profil.jpeg" class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-blue-500/30 shadow-2xl animate-float">
+      </div>
+    </div>
+  </section>
+
+ 
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="scroll-section h-auto py-20 flex items-center justify-center px-10 snap-start bg-[#0f172a] relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-cyan-900/20 -z-10"></div>
+    
+    <div class="w-full max-w-5xl mx-auto">
+      <!-- Main Heading -->
+      <div class="text-center mb-16 fade-in-up">
+        <h2 class="text-6xl md:text-7xl font-black mb-4 bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
+          Mohammed Boudia
+        </h2>
+        <p class="text-xl text-blue-300 font-semibold tracking-wide">Full-Stack Web Developer & UI/UX Enthusiast</p>
+      </div>
+
+      <!-- Main Description -->
+      <div class="bg-gradient-to-br from-[#0f172a]/80 to-[#1e2847]/80 backdrop-blur-xl border border-blue-500/20 rounded-3xl p-12 mb-16 fade-in-up" style="animation-delay: 0.1s;">
+        <p class="text-lg text-gray-200 leading-relaxed mb-6">
+          I'm a passionate <span class="text-blue-400 font-semibold">Full-Stack Web Developer</span> dedicated to creating exceptional digital experiences. With expertise in modern frontend and backend technologies, I specialize in building scalable, performant, and user-centric web applications. My approach combines clean, maintainable code with beautiful, intuitive design to deliver solutions that exceed expectations.
+        </p>
+        <p class="text-lg text-gray-300 leading-relaxed">
+          I'm driven by a passion for continuous learning and staying at the forefront of web development trends. Whether it's crafting pixel-perfect interfaces, optimizing backend performance, or architecting robust applications, I bring dedication and expertise to every project. My mission is to transform ideas into digital solutions that create real impact.
+        </p>
+      </div>
+
+      <!-- Stats Section -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        <div class="group text-center p-8 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-2xl border border-blue-500/20 hover:border-blue-400/50 transition transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 fade-in-up" style="animation-delay: 0.2s;">
+          <div class="text-5xl font-black text-blue-400 mb-3">50+</div>
+          <p class="text-gray-300 font-semibold text-lg">Projects Completed</p>
+          <p class="text-gray-500 text-sm mt-2">Delivered across diverse industries</p>
+        </div>
+        
+        <div class="group text-center p-8 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-2xl border border-blue-500/20 hover:border-blue-400/50 transition transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 fade-in-up" style="animation-delay: 0.3s;">
+          <div class="text-5xl font-black text-blue-400 mb-3">3+</div>
+          <p class="text-gray-300 font-semibold text-lg">Years Experience</p>
+          <p class="text-gray-500 text-sm mt-2">Building world-class applications</p>
+        </div>
+        
+        <div class="group text-center p-8 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-2xl border border-blue-500/20 hover:border-blue-400/50 transition transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 fade-in-up" style="animation-delay: 0.4s;">
+          <div class="text-5xl font-black text-blue-400 mb-3">100%</div>
+          <p class="text-gray-300 font-semibold text-lg">Client Satisfaction</p>
+          <p class="text-gray-500 text-sm mt-2">Committed to excellence</p>
+        </div>
+      </div>
+
+      <!-- Skills & Services Icons Section -->
+      <h3 class="text-4xl font-bold text-center mb-12 fade-in-up" style="animation-delay: 0.5s;">
+        What I <span class="text-blue-400">Deliver</span>
+      </h3>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 fade-in-up" style="animation-delay: 0.6s;">
+        
+        <!-- Frontend Development -->
+        <div class="group text-center p-8 bg-[#020617]/40 border border-blue-500/20 rounded-2xl hover:border-blue-400 hover:bg-[#0f172a] transition transform hover:-translate-y-2 hover:shadow-lg hover:shadow-blue-500/30">
+          <div class="mb-6 flex justify-center">
+            <div class="p-4 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full group-hover:from-blue-500/40 group-hover:to-cyan-500/40 transition">
+              <svg class="w-10 h-10 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M3 3h18v18H3V3m2 2v14h14V5H5m3 3h8v2H8V8m0 4h8v2H8v-2m0 4h5v2H8v-2z"/>
+              </svg>
+            </div>
+          </div>
+          <h4 class="text-xl font-bold text-white mb-3">Frontend Dev</h4>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            Crafting beautiful, responsive interfaces with React, Vue, and modern CSS frameworks.
+          </p>
+        </div>
+
+        <!-- Backend Development -->
+        <div class="group text-center p-8 bg-[#020617]/40 border border-blue-500/20 rounded-2xl hover:border-blue-400 hover:bg-[#0f172a] transition transform hover:-translate-y-2 hover:shadow-lg hover:shadow-blue-500/30">
+          <div class="mb-6 flex justify-center">
+            <div class="p-4 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full group-hover:from-blue-500/40 group-hover:to-cyan-500/40 transition">
+              <svg class="w-10 h-10 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M9 17H5V7h4m4 10h-4V7h4m4 10h-4v-3h4m-2-9H7c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2z"/>
+              </svg>
+            </div>
+          </div>
+          <h4 class="text-xl font-bold text-white mb-3">Backend Dev</h4>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            Building scalable APIs and robust backends with Node.js and modern databases.
+          </p>
+        </div>
+
+        <!-- UI/UX Design -->
+        <div class="group text-center p-8 bg-[#020617]/40 border border-blue-500/20 rounded-2xl hover:border-blue-400 hover:bg-[#0f172a] transition transform hover:-translate-y-2 hover:shadow-lg hover:shadow-blue-500/30">
+          <div class="mb-6 flex justify-center">
+            <div class="p-4 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full group-hover:from-blue-500/40 group-hover:to-cyan-500/40 transition">
+              <svg class="w-10 h-10 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
+            </div>
+          </div>
+          <h4 class="text-xl font-bold text-white mb-3">UI/UX Design</h4>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            Designing intuitive, accessible, and user-centered interfaces that delight users.
+          </p>
+        </div>
+
+        <!-- Performance Optimization -->
+        <div class="group text-center p-8 bg-[#020617]/40 border border-blue-500/20 rounded-2xl hover:border-blue-400 hover:bg-[#0f172a] transition transform hover:-translate-y-2 hover:shadow-lg hover:shadow-blue-500/30">
+          <div class="mb-6 flex justify-center">
+            <div class="p-4 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full group-hover:from-blue-500/40 group-hover:to-cyan-500/40 transition">
+              <svg class="w-10 h-10 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+            </div>
+          </div>
+          <h4 class="text-xl font-bold text-white mb-3">Performance</h4>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            Optimizing for speed, SEO, and accessibility to ensure peak website performance.
+          </p>
+        </div>
+
+        <!-- Clean Code -->
+        <div class="group text-center p-8 bg-[#020617]/40 border border-blue-500/20 rounded-2xl hover:border-blue-400 hover:bg-[#0f172a] transition transform hover:-translate-y-2 hover:shadow-lg hover:shadow-blue-500/30">
+          <div class="mb-6 flex justify-center">
+            <div class="p-4 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full group-hover:from-blue-500/40 group-hover:to-cyan-500/40 transition">
+              <svg class="w-10 h-10 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M9.4 16.6L4.8 12l4.6-4.6-1.4-1.4L2 12l6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6 1.4-1.4L22 12l-6 6-1.4-1.4z"/>
+              </svg>
+            </div>
+          </div>
+          <h4 class="text-xl font-bold text-white mb-3">Clean Code</h4>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            Writing maintainable, well-documented code that stands the test of time.
+          </p>
+        </div>
+      </div>
+
+      <!-- Call to Action -->
+      <div class="text-center mt-16 fade-in-up" style="animation-delay: 0.7s;">
+        <p class="text-gray-300 mb-6 text-lg">Ready to bring your vision to life?</p>
+        <a href="#contact" class="inline-block bg-gradient-to-r from-blue-600 to-cyan-600 px-10 py-4 rounded-lg font-bold text-lg hover:from-blue-700 hover:to-cyan-700 transition transform hover:scale-105 shadow-lg shadow-blue-500/30">
+          Let's Work Together
+        </a>
+      </div>
+    </div>
+  </section>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS SECTION -->
+  <section id="skills" class="scroll-section min-h-screen py-24 flex items-center justify-center px-10 snap-start relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-cyan-900/20 via-transparent to-blue-900/10 -z-10"></div>
+    
+    <div class="w-full max-w-7xl mx-auto">
+      <!-- Section Header -->
+      <div class="text-center mb-20 fade-in-up">
+        <h3 class="text-5xl md:text-6xl font-black mb-6 bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent">
+          Technical Skills
+        </h3>
+        <p class="text-gray-300 text-lg max-w-3xl mx-auto leading-relaxed">
+          Proficient in modern web technologies with expertise in full-stack development, responsive design, and performance optimization.
+        </p>
+      </div>
+
+      <!-- Frontend Technologies -->
+      <div class="mb-20">
+        <h4 class="text-2xl font-bold text-cyan-400 mb-8 flex items-center">
+          <div class="w-1 h-8 bg-gradient-to-b from-cyan-400 to-blue-500 rounded-full mr-4"></div>
+          Frontend Development
+        </h4>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- HTML5 -->
+          <div class="skill-card group relative overflow-hidden rounded-2xl bg-gradient-to-br from-orange-900/20 to-red-900/20 border border-orange-500/30 p-8 hover:border-orange-400/70 transition-all duration-300 hover:shadow-xl hover:shadow-orange-500/20 cursor-pointer transform hover:-translate-y-1">
+            <div class="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-red-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div class="relative z-10">
+              <div class="flex items-start justify-between mb-4">
+                <i class="fa-brands fa-html5 text-orange-500 text-4xl transform group-hover:scale-110 transition-transform"></i>
+                <span class="px-3 py-1 bg-orange-500/20 text-orange-300 rounded-full text-xs font-semibold">Expert</span>
+              </div>
+              <h4 class="text-xl font-bold text-white mb-3 group-hover:text-orange-300 transition">HTML5</h4>
+              <p class="text-gray-400 text-sm group-hover:text-gray-300 transition leading-relaxed">
+                Semantic markup, accessibility (a11y), SEO optimization, and modern HTML5 APIs for building robust web applications.
+              </p>
+            </div>
+          </div>
+
+          <!-- CSS3 -->
+          <div class="skill-card group relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-900/20 to-indigo-900/20 border border-blue-500/30 p-8 hover:border-blue-400/70 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20 cursor-pointer transform hover:-translate-y-1">
+            <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div class="relative z-10">
+              <div class="flex items-start justify-between mb-4">
+                <i class="fa-brands fa-css3-alt text-blue-500 text-4xl transform group-hover:scale-110 transition-transform"></i>
+                <span class="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-xs font-semibold">Expert</span>
+              </div>
+              <h4 class="text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition">CSS3</h4>
+              <p class="text-gray-400 text-sm group-hover:text-gray-300 transition leading-relaxed">
+                Advanced CSS layouts (Flexbox, Grid), animations, transitions, preprocessors, and responsive design patterns.
+              </p>
+            </div>
+          </div>
+
+          <!-- JavaScript -->
+          <div class="skill-card group relative overflow-hidden rounded-2xl bg-gradient-to-br from-yellow-900/20 to-amber-900/20 border border-yellow-500/30 p-8 hover:border-yellow-400/70 transition-all duration-300 hover:shadow-xl hover:shadow-yellow-500/20 cursor-pointer transform hover:-translate-y-1">
+            <div class="absolute inset-0 bg-gradient-to-br from-yellow-500/5 to-amber-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div class="relative z-10">
+              <div class="flex items-start justify-between mb-4">
+                <i class="fa-brands fa-js text-yellow-400 text-4xl transform group-hover:scale-110 transition-transform"></i>
+                <span class="px-3 py-1 bg-yellow-500/20 text-yellow-300 rounded-full text-xs font-semibold">Expert</span>
+              </div>
+              <h4 class="text-xl font-bold text-white mb-3 group-hover:text-yellow-300 transition">JavaScript</h4>
+              <p class="text-gray-400 text-sm group-hover:text-gray-300 transition leading-relaxed">
+                ES6+, DOM manipulation, async/await, APIs, event handling, and functional/OOP programming paradigms.
+              </p>
+            </div>
+          </div>
+
+          <!-- React -->
+          <div class="skill-card group relative overflow-hidden rounded-2xl bg-gradient-to-br from-cyan-900/20 to-blue-900/20 border border-cyan-500/30 p-8 hover:border-cyan-400/70 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/20 cursor-pointer transform hover:-translate-y-1">
+            <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div class="relative z-10">
+              <div class="flex items-start justify-between mb-4">
+                <i class="fa-brands fa-react text-cyan-400 text-4xl transform group-hover:scale-110 transition-transform"></i>
+                <span class="px-3 py-1 bg-cyan-500/20 text-cyan-300 rounded-full text-xs font-semibold">Advanced</span>
+              </div>
+              <h4 class="text-xl font-bold text-white mb-3 group-hover:text-cyan-300 transition">React</h4>
+              <p class="text-gray-400 text-sm group-hover:text-gray-300 transition leading-relaxed">
+                Components, hooks, state management, React Router, performance optimization, and modern React patterns.
+              </p>
+            </div>
+          </div>
+
+          <!-- Tailwind CSS -->
+          <div class="skill-card group relative overflow-hidden rounded-2xl bg-gradient-to-br from-teal-900/20 to-cyan-900/20 border border-teal-500/30 p-8 hover:border-teal-400/70 transition-all duration-300 hover:shadow-xl hover:shadow-teal-500/20 cursor-pointer transform hover:-translate-y-1">
+            <div class="absolute inset-0 bg-gradient-to-br from-teal-500/5 to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div class="relative z-10">
+              <div class="flex items-start justify-between mb-4">
+                <i class="fa-brands fa-tailwind text-teal-400 text-4xl transform group-hover:scale-110 transition-transform"></i>
+                <span class="px-3 py-1 bg-teal-500/20 text-teal-300 rounded-full text-xs font-semibold">Expert</span>
+              </div>
+              <h4 class="text-xl font-bold text-white mb-3 group-hover:text-teal-300 transition">Tailwind CSS</h4>
+              <p class="text-gray-400 text-sm group-hover:text-gray-300 transition leading-relaxed">
+                Utility-first CSS, custom configurations, responsive design, dark mode, and rapid UI prototyping.
+              </p>
+            </div>
+          </div>
+
+          <!-- TypeScript -->
+          <div class="skill-card group relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-900/20 to-slate-900/20 border border-blue-500/30 p-8 hover:border-blue-400/70 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20 cursor-pointer transform hover:-translate-y-1">
+            <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-slate-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div class="relative z-10">
+              <div class="flex items-start justify-between mb-4">
+                <i class="fa-solid fa-code text-blue-600 text-4xl transform group-hover:scale-110 transition-transform"></i>
+                <span class="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-xs font-semibold">Advanced</span>
+              </div>
+              <h4 class="text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition">TypeScript</h4>
+              <p class="text-gray-400 text-sm group-hover:text-gray-300 transition leading-relaxed">
+                Static typing, interfaces, generics, decorators, and type safety for scalable JavaScript applications.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Backend Technologies -->
+      <div class="mb-20">
+        <h4 class="text-2xl font-bold text-green-400 mb-8 flex items-center">
+          <div class="w-1 h-8 bg-gradient-to-b from-green-400 to-emerald-500 rounded-full mr-4"></div>
+          Backend Development
+        </h4>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- Node.js -->
+          <div class="skill-card group relative overflow-hidden rounded-2xl bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 p-8 hover:border-green-400/70 transition-all duration-300 hover:shadow-xl hover:shadow-green-500/20 cursor-pointer transform hover:-translate-y-1">
+            <div class="absolute inset-0 bg-gradient-to-br from-green-500/5 to-emerald-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div class="relative z-10">
+              <div class="flex items-start justify-between mb-4">
+                <i class="fa-brands fa-node-js text-green-500 text-4xl transform group-hover:scale-110 transition-transform"></i>
+                <span class="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-xs font-semibold">Advanced</span>
+              </div>
+              <h4 class="text-xl font-bold text-white mb-3 group-hover:text-green-300 transition">Node.js</h4>
+              <p class="text-gray-400 text-sm group-hover:text-gray-300 transition leading-relaxed">
+                Server-side JavaScript, Express.js, middleware, RESTful APIs, async operations, and real-time applications.
+              </p>
+            </div>
+          </div>
+
+          <!-- Express.js -->
+          <div class="skill-card group relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900/20 to-slate-900/20 border border-gray-500/30 p-8 hover:border-gray-400/70 transition-all duration-300 hover:shadow-xl hover:shadow-gray-500/20 cursor-pointer transform hover:-translate-y-1">
+            <div class="absolute inset-0 bg-gradient-to-br from-gray-500/5 to-slate-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div class="relative z-10">
+              <div class="flex items-start justify-between mb-4">
+                <i class="fa-solid fa-server text-gray-300 text-4xl transform group-hover:scale-110 transition-transform"></i>
+                <span class="px-3 py-1 bg-gray-500/20 text-gray-300 rounded-full text-xs font-semibold">Advanced</span>
+              </div>
+              <h4 class="text-xl font-bold text-white mb-3 group-hover:text-gray-300 transition">Express.js</h4>
+              <p class="text-gray-400 text-sm group-hover:text-gray-300 transition leading-relaxed">
+                Web frameworks, routing, middleware, error handling, authentication, and scalable application architecture.
+              </p>
+            </div>
+          </div>
+
+          <!-- Databases -->
+          <div class="skill-card group relative overflow-hidden rounded-2xl bg-gradient-to-br from-purple-900/20 to-pink-900/20 border border-purple-500/30 p-8 hover:border-purple-400/70 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/20 cursor-pointer transform hover:-translate-y-1">
+            <div class="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div class="relative z-10">
+              <div class="flex items-start justify-between mb-4">
+                <i class="fa-solid fa-database text-purple-500 text-4xl transform group-hover:scale-110 transition-transform"></i>
+                <span class="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-xs font-semibold">Advanced</span>
+              </div>
+              <h4 class="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition">Databases</h4>
+              <p class="text-gray-400 text-sm group-hover:text-gray-300 transition leading-relaxed">
+                MongoDB, PostgreSQL, MySQL, Firebase, data modeling, queries, indexing, and database optimization.
+              </p>
+            </div>
+          </div>
+
+          <!-- Python -->
+          <div class="skill-card group relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 p-8 hover:border-blue-400/70 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20 cursor-pointer transform hover:-translate-y-1">
+            <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div class="relative z-10">
+              <div class="flex items-start justify-between mb-4">
+                <i class="fa-brands fa-python text-blue-500 text-4xl transform group-hover:scale-110 transition-transform"></i>
+                <span class="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-xs font-semibold">Intermediate</span>
+              </div>
+              <h4 class="text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition">Python</h4>
+              <p class="text-gray-400 text-sm group-hover:text-gray-300 transition leading-relaxed">
+                Django, Flask, data analysis, automation scripts, and scripting for backend development tasks.
+              </p>
+            </div>
+          </div>
+
+          <!-- Java -->
+          <div class="skill-card group relative overflow-hidden rounded-2xl bg-gradient-to-br from-orange-900/20 to-yellow-900/20 border border-orange-500/30 p-8 hover:border-orange-400/70 transition-all duration-300 hover:shadow-xl hover:shadow-orange-500/20 cursor-pointer transform hover:-translate-y-1">
+            <div class="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-yellow-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div class="relative z-10">
+              <div class="flex items-start justify-between mb-4">
+                <svg class="w-14 h-14 text-orange-500 transform group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24"><path d="M8.851 18.59s-.917.554-.527 1.246c.213.411 1.332.265 2.037-.131l1.486-.927-.996-.188zm4.255-4.118s-.918.554-.527 1.246c.213.411 1.331.265 2.037-.131l1.486-.927-.996-.188z"/></svg>
+                <span class="px-3 py-1 bg-orange-500/20 text-orange-300 rounded-full text-xs font-semibold">Intermediate</span>
+              </div>
+              <h4 class="text-xl font-bold text-white mb-3 group-hover:text-orange-300 transition">Java</h4>
+              <p class="text-gray-400 text-sm group-hover:text-gray-300 transition leading-relaxed">
+                Object-oriented programming, Spring Boot, API development, and enterprise application development.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tools & Utilities -->
+      <div class="mb-20">
+        <h4 class="text-2xl font-bold text-pink-400 mb-8 flex items-center">
+          <div class="w-1 h-8 bg-gradient-to-b from-pink-400 to-rose-500 rounded-full mr-4"></div>
+          Tools & Utilities
+        </h4>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- Git & GitHub -->
+          <div class="skill-card group relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900/20 to-orange-900/20 border border-gray-500/30 p-8 hover:border-gray-400/70 transition-all duration-300 hover:shadow-xl hover:shadow-gray-500/20 cursor-pointer transform hover:-translate-y-1">
+            <div class="absolute inset-0 bg-gradient-to-br from-gray-500/5 to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div class="relative z-10">
+              <div class="flex items-start justify-between mb-4">
+                <svg class="w-14 h-14 text-gray-300 transform group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                <span class="px-3 py-1 bg-gray-500/20 text-gray-300 rounded-full text-xs font-semibold">Expert</span>
+              </div>
+              <h4 class="text-xl font-bold text-white mb-3 group-hover:text-gray-300 transition">Git & GitHub</h4>
+              <p class="text-gray-400 text-sm group-hover:text-gray-300 transition leading-relaxed">
+                Version control, branching strategies, pull requests, collaboration, and open-source contributions.
+              </p>
+            </div>
+          </div>
+
+          <!-- REST APIs -->
+          <div class="skill-card group relative overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-900/20 to-purple-900/20 border border-indigo-500/30 p-8 hover:border-indigo-400/70 transition-all duration-300 hover:shadow-xl hover:shadow-indigo-500/20 cursor-pointer transform hover:-translate-y-1">
+            <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div class="relative z-10">
+              <div class="flex items-start justify-between mb-4">
+                <svg class="w-14 h-14 text-indigo-500 transform group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+                <span class="px-3 py-1 bg-indigo-500/20 text-indigo-300 rounded-full text-xs font-semibold">Expert</span>
+              </div>
+              <h4 class="text-xl font-bold text-white mb-3 group-hover:text-indigo-300 transition">REST APIs</h4>
+              <p class="text-gray-400 text-sm group-hover:text-gray-300 transition leading-relaxed">
+                API design patterns, HTTP methods, status codes, documentation, and integration with third-party services.
+              </p>
+            </div>
+          </div>
+
+          <!-- Development Tools -->
+          <div class="skill-card group relative overflow-hidden rounded-2xl bg-gradient-to-br from-cyan-900/20 to-blue-900/20 border border-cyan-500/30 p-8 hover:border-cyan-400/70 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/20 cursor-pointer transform hover:-translate-y-1">
+            <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div class="relative z-10">
+              <div class="flex items-start justify-between mb-4">
+                <svg class="w-14 h-14 text-cyan-400 transform group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24"><path d="M9.4 16.6L4.8 12l4.6-4.6-1.4-1.4L2 12l6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6 1.4-1.4L22 12l-6 6-1.4-1.4z"/></svg>
+                <span class="px-3 py-1 bg-cyan-500/20 text-cyan-300 rounded-full text-xs font-semibold">Advanced</span>
+              </div>
+              <h4 class="text-xl font-bold text-white mb-3 group-hover:text-cyan-300 transition">Dev Tools</h4>
+              <p class="text-gray-400 text-sm group-hover:text-gray-300 transition leading-relaxed">
+                VS Code, Chrome DevTools, Webpack, npm/yarn, debugging, performance profiling, and build optimization.
+              </p>
+            </div>
+          </div>
+
+          <!-- Testing & QA -->
+          <div class="skill-card group relative overflow-hidden rounded-2xl bg-gradient-to-br from-red-900/20 to-pink-900/20 border border-red-500/30 p-8 hover:border-red-400/70 transition-all duration-300 hover:shadow-xl hover:shadow-red-500/20 cursor-pointer transform hover:-translate-y-1">
+            <div class="absolute inset-0 bg-gradient-to-br from-red-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div class="relative z-10">
+              <div class="flex items-start justify-between mb-4">
+                <svg class="w-14 h-14 text-red-500 transform group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                <span class="px-3 py-1 bg-red-500/20 text-red-300 rounded-full text-xs font-semibold">Advanced</span>
+              </div>
+              <h4 class="text-xl font-bold text-white mb-3 group-hover:text-red-300 transition">Testing & QA</h4>
+              <p class="text-gray-400 text-sm group-hover:text-gray-300 transition leading-relaxed">
+                Jest, React Testing Library, unit testing, integration testing, and quality assurance practices.
+              </p>
+            </div>
+          </div>
+
+          <!-- Cloud & Deployment -->
+          <div class="skill-card group relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-900/20 to-indigo-900/20 border border-blue-500/30 p-8 hover:border-blue-400/70 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20 cursor-pointer transform hover:-translate-y-1">
+            <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div class="relative z-10">
+              <div class="flex items-start justify-between mb-4">
+                <svg class="w-14 h-14 text-blue-500 transform group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/></svg>
+                <span class="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-xs font-semibold">Intermediate</span>
+              </div>
+              <h4 class="text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition">Cloud & Deploy</h4>
+              <p class="text-gray-400 text-sm group-hover:text-gray-300 transition leading-relaxed">
+                AWS, Heroku, Vercel, Docker, CI/CD pipelines, and containerization for scalable applications.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Proficiency Summary -->
+      <div class="mt-20 pt-16 border-t border-gray-700">
+        <h4 class="text-2xl font-bold text-center text-gray-300 mb-12">Proficiency Overview</h4>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          
+          <div class="text-center fade-in-up" style="animation-delay: 0.1s;">
+            <div class="text-4xl font-black bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-2">15+</div>
+            <p class="text-gray-400">Technologies Mastered</p>
+          </div>
+
+          <div class="text-center fade-in-up" style="animation-delay: 0.2s;">
+            <div class="text-4xl font-black bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent mb-2">5+</div>
+            <p class="text-gray-400">Years of Experience</p>
+          </div>
+
+          <div class="text-center fade-in-up" style="animation-delay: 0.3s;">
+            <div class="text-4xl font-black bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">50+</div>
+            <p class="text-gray-400">Projects Completed</p>
+          </div>
+
+          <div class="text-center fade-in-up" style="animation-delay: 0.4s;">
+            <div class="text-4xl font-black bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent mb-2">100%</div>
+            <p class="text-gray-400">Client Satisfaction</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PROJECTS SECTION -->
+  <section id="projects" class="scroll-section h-screen flex items-center justify-center px-10 snap-start bg-[#0f172a] relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-purple-900/20 to-transparent -z-10"></div>
+    <div class="w-full max-w-6xl mx-auto">
+      <h3 class="text-5xl font-bold mb-16 text-center fade-in-up">Featured Projects</h3>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="project-card fade-in-up" style="animation-delay: 0.1s;">
+          <img src="src/prj/prj1.jpg">
+          <h4 class="text-xl font-bold mt-4">Landing Page</h4>
+          <p class="text-gray-400 text-sm">Modern business website with stunning visuals</p>
+        </div>
+
+        <div class="project-card fade-in-up" style="animation-delay: 0.2s;">
+          <img src="src/prj/prj2 (2).jpg">
+          <h4 class="text-xl font-bold mt-4">E-commerce</h4>
+          <p class="text-gray-400 text-sm">Full-featured online shop UI with cart</p>
+        </div>
+
+        <div class="project-card fade-in-up" style="animation-delay: 0.3s;">
+          <img src="src/prj/prj3.jpg">
+          <h4 class="text-xl font-bold mt-4">Portfolio</h4>
+          <p class="text-gray-400 text-sm">Personal showcase website</p>
+        </div>
+      </div>
+    </section>
+
+  <!-- INTERACTIVE PORTFOLIO SECTION -->
+  <section id="portfolio" class="scroll-section min-h-screen py-24 flex items-center justify-center px-10 snap-start bg-gradient-to-br from-[#020617] via-[#0f172a] to-[#020617] relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-indigo-900/20 via-transparent to-purple-900/20 -z-10"></div>
+    
+    <div class="w-full max-w-6xl mx-auto">
+      <!-- Section Header -->
+      <div class="text-center mb-20 fade-in-up">
+        <h2 class="text-6xl md:text-7xl font-black mb-6 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+          My Work
+        </h2>
+        <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+          Explore my portfolio, services, and recent projects. Click any button to discover more about my work.
+        </p>
+      </div>
+
+      <!-- Interactive Buttons Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-20">
+        
+        <!-- Button 1: View All Projects -->
+        <button class="portfolio-btn group relative overflow-hidden h-48 rounded-2xl bg-gradient-to-br from-blue-600/20 to-cyan-600/20 border border-blue-500/30 hover:border-blue-400/70 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/30 p-6 text-left transform hover:-translate-y-2" data-action="scroll" data-target="#projects">
+          <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div class="relative z-10 flex flex-col h-full justify-between">
+            <div>
+              <div class="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-blue-500/40 group-hover:to-cyan-500/40 transition-all">
+                <svg class="w-6 h-6 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-white mb-2">Projects</h3>
+            </div>
+            <p class="text-gray-400 text-sm group-hover:text-gray-300 transition-colors">View my latest work →</p>
+          </div>
+        </button>
+
+        <!-- Button 2: Download CV -->
+        <button class="portfolio-btn group relative overflow-hidden h-48 rounded-2xl bg-gradient-to-br from-green-600/20 to-emerald-600/20 border border-green-500/30 hover:border-green-400/70 transition-all duration-300 hover:shadow-xl hover:shadow-green-500/30 p-6 text-left transform hover:-translate-y-2" data-action="download" data-file="cv.pdf">
+          <div class="absolute inset-0 bg-gradient-to-br from-green-500/10 to-emerald-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div class="relative z-10 flex flex-col h-full justify-between">
+            <div>
+              <div class="w-12 h-12 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-green-500/40 group-hover:to-emerald-500/40 transition-all">
+                <svg class="w-6 h-6 text-green-400" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-white mb-2">Resume</h3>
+            </div>
+            <p class="text-gray-400 text-sm group-hover:text-gray-300 transition-colors">Download CV →</p>
+          </div>
+        </button>
+
+        <!-- Button 3: Case Studies Modal -->
+        <button class="portfolio-btn group relative overflow-hidden h-48 rounded-2xl bg-gradient-to-br from-purple-600/20 to-pink-600/20 border border-purple-500/30 hover:border-purple-400/70 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/30 p-6 text-left transform hover:-translate-y-2" data-action="modal" data-modal="casestudies">
+          <div class="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div class="relative z-10 flex flex-col h-full justify-between">
+            <div>
+              <div class="w-12 h-12 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-purple-500/40 group-hover:to-pink-500/40 transition-all">
+                <svg class="w-6 h-6 text-purple-400" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-5.04-6.71l-2.75 3.54 2.25 2.76c.2.25.5.39.81.39.23 0 .45-.08.64-.23l5.51-4.07c.45-.34.52-.97.18-1.42-.35-.45-.98-.52-1.42-.18L13.1 12.5l-1.77-2.27c-.23-.29-.61-.38-.96-.23-.35.15-.56.5-.5.88z"/>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-white mb-2">Case Studies</h3>
+            </div>
+            <p class="text-gray-400 text-sm group-hover:text-gray-300 transition-colors">View detailed work →</p>
+          </div>
+        </button>
+
+        <!-- Button 4: Contact Me -->
+        <button class="portfolio-btn group relative overflow-hidden h-48 rounded-2xl bg-gradient-to-br from-orange-600/20 to-red-600/20 border border-orange-500/30 hover:border-orange-400/70 transition-all duration-300 hover:shadow-xl hover:shadow-orange-500/30 p-6 text-left transform hover:-translate-y-2" data-action="scroll" data-target="#contact">
+          <div class="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-red-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div class="relative z-10 flex flex-col h-full justify-between">
+            <div>
+              <div class="w-12 h-12 bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-orange-500/40 group-hover:to-red-500/40 transition-all">
+                <svg class="w-6 h-6 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-white mb-2">Contact</h3>
+            </div>
+            <p class="text-gray-400 text-sm group-hover:text-gray-300 transition-colors">Get in touch →</p>
+          </div>
+        </button>
+
+        <!-- Button 5: External Link -->
+        <button class="portfolio-btn group relative overflow-hidden h-48 rounded-2xl bg-gradient-to-br from-cyan-600/20 to-blue-600/20 border border-cyan-500/30 hover:border-cyan-400/70 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 p-6 text-left transform hover:-translate-y-2" data-action="external" data-url="https://github.com">
+          <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div class="relative z-10 flex flex-col h-full justify-between">
+            <div>
+              <div class="w-12 h-12 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-cyan-500/40 group-hover:to-blue-500/40 transition-all">
+                <svg class="w-6 h-6 text-cyan-400" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-white mb-2">GitHub</h3>
+            </div>
+            <p class="text-gray-400 text-sm group-hover:text-gray-300 transition-colors">View repositories →</p>
+          </div>
+        </button>
+      </div>
+
+      <!-- Call to Action -->
+      <div class="text-center fade-in-up" style="animation-delay: 0.3s;">
+        <p class="text-gray-400 mb-6">Want to discuss a project or need more information?</p>
+        <a href="#contact" class="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 px-12 py-4 rounded-xl font-bold text-lg hover:from-indigo-700 hover:to-purple-700 transition-all transform hover:scale-105 shadow-lg shadow-indigo-500/30">
+          Let's Connect
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODALS -->
+  <!-- Case Studies Modal -->
+  <div id="casestudies-modal" class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+    <div class="bg-gradient-to-br from-[#0f172a] to-[#020617] border border-purple-500/30 rounded-3xl max-w-2xl w-full max-h-96 overflow-y-auto p-8 animate-scale-in">
+      <div class="flex justify-between items-start mb-6">
+        <h3 class="text-4xl font-bold text-white">Case Studies</h3>
+        <button class="modal-close text-gray-400 hover:text-white transition text-3xl">&times;</button>
+      </div>
+      
+      <div class="space-y-6">
+        <div class="border-l-4 border-purple-500 pl-6">
+          <h4 class="text-xl font-bold text-white mb-2">E-Commerce Platform Redesign</h4>
+          <p class="text-gray-300 mb-2">Increased conversion rates by 35% through UX optimization and modern design</p>
+          <p class="text-gray-500 text-sm">Technologies: React, Node.js, MongoDB</p>
+        </div>
+
+        <div class="border-l-4 border-purple-500 pl-6">
+          <h4 class="text-xl font-bold text-white mb-2">SaaS Dashboard Development</h4>
+          <p class="text-gray-300 mb-2">Built a real-time analytics dashboard for 10k+ users with performance optimization</p>
+          <p class="text-gray-500 text-sm">Technologies: Vue.js, Express, PostgreSQL</p>
+        </div>
+
+        <div class="border-l-4 border-purple-500 pl-6">
+          <h4 class="text-xl font-bold text-white mb-2">Mobile App Migration</h4>
+          <p class="text-gray-300 mb-2">Successfully migrated legacy system to modern tech stack with zero downtime</p>
+          <p class="text-gray-500 text-sm">Technologies: React Native, Firebase, AWS</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="scroll-section h-screen flex items-center justify-center px-10 snap-start relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-pink-900/20 to-transparent -z-10"></div>
+    <div class="w-full max-w-3xl mx-auto text-center fade-in-up">
+      <h3 class="text-5xl font-bold mb-8">Get In Touch</h3>
+      <p class="text-xl text-gray-300 mb-12 leading-relaxed">
+        I'm always open to new opportunities and interesting projects. Whether you have a question or just want to say hello, feel free to reach out!
+      </p>
+      
+      <div class="mb-12">
+        <a href="mailto:mohammed@email.com" class="inline-block bg-blue-600 px-10 py-4 rounded-lg hover:bg-blue-700 transition font-semibold text-lg transform hover:scale-105">
+          Send Me an Email
+        </a>
+      </div>
+
+      <div class="flex flex-wrap justify-center gap-6 mb-12">
+        <!-- GitHub -->
+        <a href="https://github.com/MOHAMMED-BOUDIA" target="_blank" class="text-gray-400 hover:text-blue-400 transition text-3xl transform hover:scale-125" title="GitHub">
+          <i class="fa-brands fa-github text-2xl"></i>
+        </a>
+        
+        <!-- LinkedIn -->
+        <a href="https://linkedin.com" target="_blank" class="text-gray-400 hover:text-blue-400 transition text-3xl transform hover:scale-125" title="LinkedIn">
+          <i class="fa-brands fa-linkedin text-2xl"></i>
+        </a>
+        
+        <!-- Twitter/X -->
+        <a href="https://twitter.com" target="_blank" class="text-gray-400 hover:text-blue-400 transition text-3xl transform hover:scale-125" title="Twitter">
+          <i class="fa-brands fa-x-twitter text-2xl"></i>
+        </a>
+        
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/moha.__.med_3" target="_blank" class="text-gray-400 hover:text-blue-400 transition text-3xl transform hover:scale-125" title="Instagram">
+          <i class="fa-brands fa-instagram text-2xl"></i>
+        </a>
+        
+        <!-- Facebook -->
+        <a href="https://facebook.com" target="_blank" class="text-gray-400 hover:text-blue-400 transition text-3xl transform hover:scale-125" title="Facebook">
+          <i class="fa-brands fa-facebook text-2xl"></i>
+        </a>
+        
+        <!-- YouTube -->
+        <a href="https://youtube.com" target="_blank" class="text-gray-400 hover:text-blue-400 transition text-3xl transform hover:scale-125" title="YouTube">
+          <i class="fa-brands fa-youtube text-2xl"></i>
+        </a>
+
+        <!-- TikTok -->
+        <a href="https://tiktok.com" target="_blank" class="text-gray-400 hover:text-blue-400 transition text-3xl transform hover:scale-125" title="TikTok">
+          <i class="fa-brands fa-tiktok text-2xl"></i>
+        </a>
+
+        <!-- Email -->
+        <a href="mailto:mohammed@email.com" class="text-gray-400 hover:text-blue-400 transition text-3xl transform hover:scale-125" title="Email">
+          <i class="fa-solid fa-envelope text-2xl"></i>
+        </a>
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/+212611294080" target="_blank" class="text-gray-400 hover:text-blue-400 transition text-3xl transform hover:scale-125" title="WhatsApp">
+          <i class="fa-brands fa-whatsapp text-2xl"></i>
+        </a>
+      </div>
+
+      <p class="text-gray-400 text-sm mt-8">
+        Response time: Usually within 24 hours
+      </p>
+    </div>
+  </section>
+
+  <footer class="bg-[#0f172a] border-t border-blue-500/20 py-8 text-center text-gray-500">
+    <p>© 2026 Mohammed. All rights reserved.</p>
+  </footer>
+
+  <style>
+    :root {
+      --bg: #020617;
+      --card: #0f172a
+    }
+
+    html {
+      scroll-snap-type: y mandatory;
+      scroll-behavior: smooth;
+    }
+
+    html,
+    body {
+      height: 100%
+    }
+
+    body {
+      transition: background .25s, color .25s
+    }
+
+    a, button {
+      transition: all .3s ease;
+    }
+
+    /* Scroll snap sections */
+    .scroll-section {
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+    }
+
+    /* Fade-in animations */
+    .fade-in-up {
+      animation: fadeInUp .8s ease backwards;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .skill {
+      background: var(--card);
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      transition: .3s ease all;
+      animation: fadeInUp .6s ease backwards;
+    }
+
+    .skill:hover {
+      transform: translateY(-8px) scale(1.05);
+      background: linear-gradient(135deg, var(--card), rgba(99, 102, 241, 0.2));
+      box-shadow: 0 15px 40px rgba(99, 102, 241, 0.3);
+    }
+
+    .project-card {
+      background: var(--bg);
+      padding: 20px;
+      border-radius: 14px;
+      transition: .3s ease all;
+      border: 1px solid rgba(99, 102, 241, 0.2);
+      overflow: hidden;
+    }
+
+    .project-card img {
+      border-radius: 10px;
+      margin-bottom: 10px;
+      transition: transform .4s cubic-bezier(0.34, 1.56, 0.64, 1);
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .project-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 20px 50px rgba(99, 102, 241, 0.4);
+      border-color: rgba(99, 102, 241, 0.5);
+    }
+
+    .project-card:hover img {
+      transform: scale(1.1) rotate(2deg);
+    }
+
+    /* Scroll dots */
+    .scroll-dot {
+      cursor: pointer;
+      display: block;
+    }
+
+    .scroll-dot.active {
+      background: #3b82f6;
+      width: 4px;
+      height: 4px;
+    }
+
+    /* custom cursor */
+    .cursor {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 18px;
+      height: 18px;
+      border-radius: 9999px;
+      border: 2px solid rgba(99, 102, 241, .9);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      z-index: 9999;
+      transition: transform .12s ease, width .12s ease, height .12s ease, background .12s;
+      box-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
+    }
+
+    .cursor.active {
+      width: 32px;
+      height: 32px;
+      border: 2px solid rgba(59, 130, 246, 0.8);
+      background: rgba(99, 102, 241, 0.1);
+    }
+
+    /* loader overlay */
+    #loader {
+      background: var(--bg);
+      animation: fadeOut .5s ease forwards;
+      animation-delay: .3s;
+    }
+
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    /* typing target */
+    #typing {
+      font-weight: 700;
+      color: #60a5fa;
+    }
+
+    /* particles canvas behind content */
+    canvas {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0
+    }
+
+    /* light theme */
+    .light {
+      background: #f8fafc;
+      color: #0f172a
+    }
+
+    .light .project-card {
+      background: #fff;
+      border-color: rgba(99, 102, 241, 0.15);
+    }
+
+    .light .skill {
+      background: #f0f4f8;
+      color: #0f172a;
+      border: 1px solid rgba(99, 102, 241, 0.1);
+    }
+
+    .light .skill:hover {
+      background: linear-gradient(135deg, #f0f4f8, rgba(99, 102, 241, 0.15));
+    }
+
+    /* Skills Cards */
+    .skill-card {
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Portfolio Button Animations */
+    @keyframes scaleIn {
+      from {
+        transform: scale(0.95);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .portfolio-btn {
+      animation: scaleIn 0.6s ease backwards;
+    }
+
+    .portfolio-btn:nth-child(1) { animation-delay: 0.1s; }
+    .portfolio-btn:nth-child(2) { animation-delay: 0.2s; }
+    .portfolio-btn:nth-child(3) { animation-delay: 0.3s; }
+    .portfolio-btn:nth-child(4) { animation-delay: 0.4s; }
+    .portfolio-btn:nth-child(5) { animation-delay: 0.5s; }
+
+    /* Modal Animation */
+    @keyframes modalSlideIn {
+      from {
+        transform: scale(0.9) translateY(20px);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .animate-scale-in {
+      animation: modalSlideIn 0.3s ease forwards;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .scroll-section {
+        padding: 80px 20px 40px;
+      }
+
+      .scroll-section h3 {
+        font-size: 2.25rem;
+      }
+
+      .right-8 {
+        right: 12px;
+      }
+
+      .right-8 {
+        gap: 8px;
+      }
+    }
+  </style>
+
+  <script src="main.js"></script>
+  <script src="typing.js"></script>
+  <script src="scroll.js"></script>
+  <script src="theme.js"></script>
+  <script src="loader.js"></script>
+  <script src="cursor.js"></script>
+  <script src="particles.js"></script>
+
+  <!-- Scroll Indicator Script -->
+  <script>
+    // Update scroll dots based on scroll position
+    const scrollDots = document.querySelectorAll('.scroll-dot');
+    const scrollSections = document.querySelectorAll('.scroll-section');
+
+    window.addEventListener('scroll', () => {
+      let current = 0;
+      scrollSections.forEach((section, index) => {
+        const sectionTop = section.offsetTop;
+        if (pageYOffset >= sectionTop - 300) {
+          current = index;
+        }
+      });
+
+      scrollDots.forEach((dot, index) => {
+        dot.classList.remove('active');
+        if (index === current) {
+          dot.classList.add('active');
+        }
+      });
+    });
+
+    // Scroll to section when clicking dots
+    scrollDots.forEach((dot) => {
+      dot.addEventListener('click', () => {
+        const sectionIndex = parseInt(dot.getAttribute('data-section'));
+        scrollSections[sectionIndex].scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // Smooth scroll for navbar links
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', (e) => {
+        const href = link.getAttribute('href');
+        if (href.startsWith('#')) {
+          e.preventDefault();
+          const target = document.querySelector(href);
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      });
+    });
+
+    // Portfolio Button Handlers
+    document.querySelectorAll('.portfolio-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const action = btn.getAttribute('data-action');
+        
+        if (action === 'scroll') {
+          // Scroll to section
+          const target = btn.getAttribute('data-target');
+          const element = document.querySelector(target);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        } else if (action === 'modal') {
+          // Open modal
+          const modalId = btn.getAttribute('data-modal') + '-modal';
+          const modal = document.getElementById(modalId);
+          if (modal) {
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+          }
+        } else if (action === 'external') {
+          // Open external link
+          const url = btn.getAttribute('data-url');
+          window.open(url, '_blank');
+        } else if (action === 'download') {
+          // Download file
+          const filename = btn.getAttribute('data-file');
+          alert(`Download link would go to: ${filename}`);
+          // In real use: window.location.href = `/path/to/${filename}`;
+        }
+      });
+    });
+
+    // Modal close handlers
+    document.querySelectorAll('.modal-close').forEach(closeBtn => {
+      closeBtn.addEventListener('click', (e) => {
+        const modal = e.target.closest('[id$="-modal"]');
+        if (modal) {
+          modal.classList.add('hidden');
+          document.body.style.overflow = 'auto';
+        }
+      });
+    });
+
+    // Close modal when clicking outside
+    document.querySelectorAll('[id$="-modal"]').forEach(modal => {
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          modal.classList.add('hidden');
+          document.body.style.overflow = 'auto';
+        }
+      });
+    });
+
+    // Keyboard shortcut to close modals (Escape key)
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('[id$="-modal"]').forEach(modal => {
+          modal.classList.add('hidden');
+          document.body.style.overflow = 'auto';
+        });
+      }
+    });
+
+    // Skill Cards Interactivity
+    document.querySelectorAll('.skill-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const skillTitle = card.querySelector('h4').textContent;
+        const skillDescription = card.querySelector('p').textContent;
+        
+        // Create a simple toast/notification effect
+        const toast = document.createElement('div');
+        toast.className = 'fixed bottom-8 right-8 bg-gradient-to-r from-blue-600 to-cyan-600 px-6 py-4 rounded-lg text-white shadow-lg shadow-blue-500/30 z-50 animate-bounce';
+        toast.textContent = `Selected: ${skillTitle}`;
+        document.body.appendChild(toast);
+        
+        // Remove toast after 2 seconds
+        setTimeout(() => {
+          toast.remove();
+        }, 2000);
+      });
+    });
+  </script>
+
+</body>
+
+</html>
